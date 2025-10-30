@@ -93,6 +93,11 @@ If you need a JSON output file for reporting, run:
 ```bash
 docker run --rm -v "$(pwd)":/scripts -w /scripts grafana/k6 run --out json=/scripts/results.json k6-login-test.js
 ```
+or
+
+```bash
+docker run --rm -v "/Users/kunnath/Projects/k6":/scripts -w /scripts grafana/k6 run --out json=/scripts/results.json k6-login-test.js && node generate-k6-report.js
+```
 
 Notes for Apple Silicon (M1/ M2 / arm64):
 - `loadimpact/k6:latest` may not have an arm64 manifest and fail to run. The `grafana/k6` image in most cases is multi-arch and works on Apple Silicon.

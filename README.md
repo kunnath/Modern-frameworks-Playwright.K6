@@ -1,4 +1,5 @@
 # k6 & Playwright Tests — README
+![k6 Report Demo](k6.png)
 
 This repository contains small test scripts for two purposes:
 - UI automation with Playwright: `playwright-login-test.js`
